@@ -26,6 +26,6 @@ The SingleListItem component is used to draw each item in turn in the ListCompon
    
    d) In the ‘WrappedListComponent’ component, the ‘isSelected’ prop passed to ‘SingleListItem’ is not defined correctly. To indicate if the current item is selected       or not it should be ‘isSelected={selectedIndex===index}’.
    
-3. In the file attached in this repository, I have fixed the errors and optimized the code and also modified it using some CSS.
+3. In the file attached in this repository (list.js), I have fixed the errors and optimized the code and also modified it using some CSS and it is run using the        app.js in which I have imported the list component and rendered it by passing the list items as well.
 
 
