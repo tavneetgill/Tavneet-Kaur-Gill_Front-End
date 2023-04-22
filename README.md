@@ -11,10 +11,13 @@ Here are the answers to the queries asked for the assignment:
  
 Another useful component that renders the complete list is the ListComponent. It only needs one prop
 items (an array of objects, each of which represents a list item and includes a text property containing the text that will be displayed in that item).
+
 Using the useState hook, the ListComponent keeps track of the currently selected item in an internal state. Using the handleClick function, it initialises the selectedIndex to null and updates it when a user clicks on an item in the list.
+
 The SingleListItem component is used to draw each item in turn in the ListComponent's render method after mapping over the items array. The SingleListItem component receives the onClickHandler prop in order to handle clicks on the item. When the item's index matches the selectedIndex, the isSelected prop is set to true; otherwise, it is set to false. Finally, in order to enhance efficiency and prevent rendering problems, the key prop is set to the item's index.
 
 2. Below are the problems which are there in the code: 
+
    a) In the ‘WrappedSingleListItem’ component, the’onClick’ prop should be called as the function rather being called immediately. To correct this, ‘onClick’ prop         is defined as a function which calls ‘onClickHandler’ function with ‘index’ as argument.
    
    b) In the ‘WrappedListComponent’ component, the ‘setSelectedIndex’ function is assigned to ‘selectedIndex’ and vice-versa, so to fix this we change useState to         useState(null).
